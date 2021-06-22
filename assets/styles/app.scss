@@ -1,0 +1,10 @@
+@import './variables';
+@import '~bootstrap/scss/bootstrap';
+
+.icon{
+position:fixed;	/*на экране и не меняет своего положения при прокрутке веб-страницы*/
+width:50px;/*ширина*/
+bottom: 15px; /* Положение от нижнего края */
+right: 5px; /* Положение от правого края */
+top:250px;/*отступ сверху*/
+}

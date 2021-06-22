@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Приготовление{% endblock %}
+{% block head %}
+
+{% endblock %}
+{% block stylesheets %}
+  <link href="{{ asset('build/app.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+</br>
+
+{% for row in recipes|batch(4) %}
+        <div class="row">
+            {% for recipe in row %}
+            <div class="card text-center" style="width: 100%;">
+              <h5 class="card-header">Приготовление</h5>
+              <div class="card-body">
+                <h1 class="card-title">{{ recipe.title }}</h1>
+                <p class="card-text">{{ recipe.recipe_cooking|raw}}</p>
+              </div>
+            </div>
+          </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+{% endblock %}

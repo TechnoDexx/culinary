@@ -1,0 +1,24 @@
+# config/packages/easy_admin.yaml
+easy_admin:
+    design:
+        form_theme:
+            - '@EasyAdmin/form/bootstrap_4.html.twig'
+            - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
+    entities:
+        Recipes:
+          form:
+                fields:
+                    - { property: 'ImageFile', type: 'vich_image' }
+                    # - { property: 'recipe_cooking', type: 'fos_ckeditor' }
+                    - { property: 'recipe_cooking', type: 'CKEditorType'}
+            # ...
+          list:
+                fields:
+                    - { property: 'ImageFile', type: 'vich_image', base_path: '%app.path.product_images%' }
+                    - { property: 'recipe_cooking', type: 'fos_ckeditor' }
+
+            # ...
+          show:
+                fields:
+                    - { property: 'ImageFile', type: 'vich_image', base_path: '%app.path.product_images%' }
+                    - { property: 'recipe_cooking', type: 'fos_ckeditor' }
