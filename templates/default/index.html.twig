@@ -8,12 +8,15 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-     Welcome from Default Controller
-    </ul>
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <img src="..." class="rounded me-2" alt="...">
+    <strong class="me-auto">Bootstrap</strong>
+    <small>11 мин. назад</small>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+  </div>
+  <div class="toast-body">
+    Привет мир! Это тост-сообщение.
+  </div>
 </div>
 {% endblock %}
